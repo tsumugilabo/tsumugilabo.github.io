@@ -254,6 +254,24 @@
     padding-bottom: 2px;
   }
 
+  /* business info */
+  .info-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .info-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+    font-size: 15px;
+  }
+  @media (max-width: 480px) { .info-row { grid-template-columns: 1fr; gap: 4px; } }
+  .info-row dt { color: var(--text-muted); font-weight: 600; margin: 0; }
+  .info-row dd { margin: 0; }
+  .info-row a { color: var(--accent-text); text-decoration: none; border-bottom: 1px solid currentColor; }
+
   footer {
     padding: 40px 20px 60px;
     text-align: center;
@@ -414,6 +432,18 @@
     <h2>お問い合わせ</h2>
     <p class="lead" style="margin:0 auto">ご相談・お見積もりのご依頼は下記メールアドレスよりお願いいたします。</p>
     <a class="contact-email" href="mailto:tsumugilabo202608@gmail.com">tsumugilabo202608@gmail.com</a>
+  </div>
+</section>
+
+<section id="business-info" class="alt">
+  <div class="wrap" style="max-width:640px">
+    <p class="eyebrow">事業者情報</p>
+    <dl class="info-list">
+      <div class="info-row"><dt>屋号</dt><dd>TSUMUGI Labo.</dd></div>
+      <div class="info-row"><dt>代表</dt><dd>渋谷 憲(シブタニ ケン)</dd></div>
+      <div class="info-row"><dt>所在地</dt><dd>大阪府池田市</dd></div>
+      <div class="info-row"><dt>連絡先</dt><dd><a href="mailto:tsumugilabo202608@gmail.com">tsumugilabo202608@gmail.com</a></dd></div>
+    </dl>
   </div>
 </section>
 
