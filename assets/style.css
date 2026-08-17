@@ -195,6 +195,35 @@ section.deep .lead { color: var(--text-muted-on-deep); }
   padding: 6px 13px;
 }
 
+/* ---- photos ---- */
+.feature-img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 36px auto 0;
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+}
+.feature-img.small { max-width: 360px; }
+
+.card-cover {
+  display: block;
+  width: calc(100% + 56px);
+  height: 140px;
+  object-fit: cover;
+  margin: -28px -28px 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.reason-img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin-top: 14px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
 /* ---- grids / cards ---- */
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
 .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }

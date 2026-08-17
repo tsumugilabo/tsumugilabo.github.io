@@ -1,0 +1,4 @@
+# Raw/unoptimized source images (not referenced by the site; optimized copies live in assets/img/)
+/img/
+# Local scratch/draft files
+/html_txt/
