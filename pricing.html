@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>料金 | TSUMUGI Labo.</title>
-<meta name="description" content="スプレッドシート自動化から小規模業務システム構築、電子帳簿保存法・タイムスタンプ対応まで。TSUMUGI Labo.の料金の目安です。">
+<title>料金・サービス一覧 | TSUMUGI Labo.</title>
+<meta name="description" content="業務アプリ・業務システムの開発から、集計・通知の自動化、既存ツールの改修、要件整理・設計書作成まで。TSUMUGI Labo.のサービス一覧と料金です。">
 <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -31,67 +31,496 @@
 
 <div class="page-hero wrap">
   <p class="eyebrow">PRICE</p>
-  <h1>料金</h1>
-  <p class="lead" style="margin:14px auto 0">すべて目安の価格です。基本は個別お見積もりとなり、要件に応じて金額は変動します。まずはお気軽にご相談ください。</p>
+  <h1>料金・サービス一覧</h1>
+  <p class="lead" style="margin:14px auto 0">お引き受けできる仕事を、内容と価格をつけて一覧にしました。ご依頼の多いものは3つのプランからお選びいただけます。当てはまるものがなくても、近いところからご相談ください。</p>
 </div>
 
 <section>
+  <div class="wrap-narrow">
+    <div class="card">
+      <h3>このページの見方</h3>
+      <ul style="margin:0;padding-left:1.15em;color:var(--text-muted);font-size:14.5px;display:flex;flex-direction:column;gap:6px">
+        <li><strong style="color:var(--text)">3プラン表示のサービス</strong> — ご依頼の多い内容です。記載の範囲であれば、その価格でお引き受けします。</li>
+        <li><strong style="color:var(--text)">「〜」表示のサービス</strong> — 内容の幅が大きいため、個別にお見積もりします。記載は最小構成の目安です。</li>
+        <li>価格はすべて<strong style="color:var(--text)">税抜</strong>、納期はご依頼内容が確定した日からの日数です。お見積もりは無料です。</li>
+      </ul>
+    </div>
+    <div class="chip-row">
+      <a class="chip" href="#cat01">業務アプリ・業務システム開発</a>
+      <a class="chip" href="#cat02">集計・帳票の自動化</a>
+      <a class="chip" href="#cat03">通知・外部連携の自動化</a>
+      <a class="chip" href="#cat04">データ収集・情報整理</a>
+      <a class="chip" href="#cat05">既存ツールの引き継ぎ・改修</a>
+      <a class="chip" href="#cat06">要件整理・設計・ドキュメント</a>
+      <a class="chip" href="#cat07">AI活用による業務改善</a>
+      <a class="chip" href="#cat08">保守・導入サポート</a>
+      <a class="chip" href="#other">ご相談ベースでの対応</a>
+      <a class="chip" href="#compliance">電子帳簿保存法対応</a>
+      <a class="chip" href="#timestamp">タイムスタンプ導入支援</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="cat01">
   <div class="wrap">
-    <div class="grid1">
-      <div class="card">
-        <h3>集計・転記の自動化</h3>
-        <ul class="price-list">
-          <li><span class="price-name">売上・勤怠・在庫の日次/月次集計</span><span class="price-value">¥25,000〜</span></li>
-          <li><span class="price-name">手作業の転記・突合の自動化</span><span class="price-value">¥20,000〜</span></li>
-          <li><span class="price-name">請求書・見積書の金額計算</span><span class="price-value">¥20,000〜</span></li>
-        </ul>
+    <p class="eyebrow">01</p>
+    <h2>業務アプリ・業務システム開発</h2>
+    <p class="lead">日々の入力・照会・集計を、専用の画面で回せる形にします。規模は小さくても、設計してから作ります。</p>
+    <div class="svc-group">
+
+      <div class="card svc">
+        <h3>業務データベースの新規構築</h3>
+        <p class="svc-sub">在庫・顧客・受発注・実績の管理など。要件が固まっていない段階からご相談いただけます。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック（小規模）</div>
+            <p class="plan-desc">マスタ1＋明細1の登録・検索・一覧。簡易帳票1本まで。</p>
+            <div class="plan-foot"><span class="plan-term">納期 7日</span><span class="plan-price">¥30,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">マスタ3＋明細。検索条件の作り込み、帳票2本、基本設計書付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 14日</span><span class="plan-price">¥60,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">マスタ5＋明細＋集計。権限管理・データ移行・詳細設計書・操作マニュアル込み。</p>
+            <div class="plan-foot"><span class="plan-term">納期 30日</span><span class="plan-price">¥120,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　既存Excelからのデータ移行 +¥15,000 ／ SQL Server接続対応 +¥20,000</p>
       </div>
-      <div class="card">
-        <h3>通知・アラートの自動化</h3>
-        <ul class="price-list">
-          <li><span class="price-name">フォーム回答の受付・通知メール</span><span class="price-value">¥15,000〜</span></li>
-          <li><span class="price-name">期限・在庫切れなどの自動アラート</span><span class="price-value">¥20,000〜</span></li>
-          <li><span class="price-name">Gmail・カレンダーとの連携</span><span class="price-value">¥25,000〜</span></li>
-        </ul>
+
+      <div class="card svc">
+        <h3>Windows業務アプリの開発</h3>
+        <p class="svc-sub">現場で使う入力・照会・帳票のアプリを作ります。インストーラを付けてお渡しします。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック（小規模）</div>
+            <p class="plan-desc">画面1〜2枚の入力・一覧アプリ。ローカルデータベース対応。</p>
+            <div class="plan-foot"><span class="plan-term">納期 10日</span><span class="plan-price">¥40,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">画面3〜5枚＋帳票出力＋設定画面。基本設計書付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 21日</span><span class="plan-price">¥80,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">データベース接続・権限管理・複数帳票・インストーラまで一式。詳細設計書付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 45日</span><span class="plan-price">¥150,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　SQL Server／Accessデータベース接続対応 +¥20,000</p>
       </div>
+
+      <div class="card svc">
+        <h3>集計ダッシュボードの構築</h3>
+        <p class="svc-sub">勤怠・売上などのデータを読み込むだけで、今の状況が一目で分かる画面にします。社外にデータを送らない構成も可能です。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック</div>
+            <p class="plan-desc">1種類のデータの集計画面（サマリーカード＋表）。ブラウザで動作します。</p>
+            <div class="plan-foot"><span class="plan-term">納期 7日</span><span class="plan-price">¥25,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">グラフ・絞り込み・異常値の検出まで。配色は御社に合わせます。</p>
+            <div class="plan-foot"><span class="plan-term">納期 14日</span><span class="plan-price">¥45,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">複数データの統合＋期間比較＋出力機能。スプレッドシート連携も可能。</p>
+            <div class="plan-foot"><span class="plan-term">納期 21日</span><span class="plan-price">¥80,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　Looker Studioでの構築に変更 +¥15,000</p>
+      </div>
+
       <div class="card">
-        <h3>小規模業務システム構築</h3>
+        <h3>スプレッドシート型の小規模システム</h3>
+        <p class="svc-sub">専用ソフトを新しく導入せず、お使いのGoogleアカウントの範囲で完結させる構成です。内容の幅が大きいため個別にお見積もりします。</p>
         <ul class="price-list">
           <li><span class="price-name">在庫管理・入出庫システム</span><span class="price-value">¥80,000〜</span></li>
           <li><span class="price-name">勤怠管理・シフト管理システム</span><span class="price-value">¥80,000〜</span></li>
           <li><span class="price-name">予約管理システム(重複防止つき)</span><span class="price-value">¥100,000〜</span></li>
         </ul>
       </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="cat02">
+  <div class="wrap">
+    <p class="eyebrow">02</p>
+    <h2>集計・帳票の自動化</h2>
+    <p class="lead">毎月あるいは毎週、手作業で作り直している集計表・請求書・報告書を、実行するだけで出る形にします。</p>
+    <div class="svc-group">
+
+      <div class="card svc">
+        <h3>スプレッドシートの集計・帳票作成</h3>
+        <p class="svc-sub">毎回手で作っている月次集計・請求書・報告書を、ボタン1つで出る形にします。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック</div>
+            <p class="plan-desc">1種類の集計表を自動生成。関数またはスクリプトで構築します。</p>
+            <div class="plan-foot"><span class="plan-term">納期 3日</span><span class="plan-price">¥15,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">複数軸の集計＋PDF帳票の自動出力。書式は既存のものに合わせます。</p>
+            <div class="plan-foot"><span class="plan-term">納期 7日</span><span class="plan-price">¥30,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">複数シート横断の集計・帳票・自動保存まで一式。定期実行の設定込み。</p>
+            <div class="plan-foot"><span class="plan-term">納期 14日</span><span class="plan-price">¥55,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　Googleドライブへの自動保存・共有設定 +¥8,000</p>
+      </div>
+
+      <div class="card svc">
+        <h3>Excelの定型作業の自動化</h3>
+        <p class="svc-sub">毎月の転記・集計・帳票づくりを自動化します。今お使いのブックに組み込む形でも対応します。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック（単機能）</div>
+            <p class="plan-desc">1つの処理を自動化（転記・集計・シート分割など）。動作説明付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 3日</span><span class="plan-price">¥12,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">複数処理をボタン化＋入力チェック。エラー時のメッセージも整備します。</p>
+            <div class="plan-foot"><span class="plan-term">納期 5日</span><span class="plan-price">¥25,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">複数ブック横断の集計・帳票出力まで一式。操作マニュアル付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 10日</span><span class="plan-price">¥50,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　既存マクロの改修・高速化 +¥10,000〜</p>
+      </div>
+
+      <div class="card svc">
+        <h3>CSV・Excelの集計ツール開発</h3>
+        <p class="svc-sub">複数ファイルの一括集計、文字コードのばらつき、異常データの除外まで面倒を見ます。件数が多く表計算ソフトでは重い場合に向いています。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック</div>
+            <p class="plan-desc">1種類のCSVを集計してCSV出力。実行手順書付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 5日</span><span class="plan-price">¥20,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">複数ファイル一括＋複数軸の集計＋エラー行のログ出力。</p>
+            <div class="plan-foot"><span class="plan-term">納期 7日</span><span class="plan-price">¥35,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">Excel形式の整形出力・グラフ付きレポートまで。自動テスト付きで納品。</p>
+            <div class="plan-foot"><span class="plan-term">納期 14日</span><span class="plan-price">¥60,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　単体で実行できる形式に変換（専用ソフトの導入を不要に） +¥15,000</p>
+      </div>
+
       <div class="card">
-        <h3>業務効率化・文書管理のご提案</h3>
+        <h3>そのほかの集計・転記</h3>
+        <p class="svc-sub">上記のプランに当てはまらないものは、内容をお聞きした上で個別にお見積もりします。</p>
         <ul class="price-list">
-          <li><span class="price-name">業務フローの整理・可視化</span><span class="price-value">¥30,000〜</span></li>
-          <li><span class="price-name">文書管理・ファイリング体制の見直し</span><span class="price-value">¥40,000〜</span></li>
-          <li><span class="price-name">ペーパーレス化のご提案</span><span class="price-value">¥40,000〜</span></li>
+          <li><span class="price-name">手作業の転記・突合の自動化</span><span class="price-value">¥20,000〜</span></li>
+          <li><span class="price-name">請求書・見積書の金額計算</span><span class="price-value">¥20,000〜</span></li>
+          <li><span class="price-name">売上・勤怠・在庫の日次/月次集計</span><span class="price-value">¥25,000〜</span></li>
         </ul>
       </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="cat03">
+  <div class="wrap">
+    <p class="eyebrow">03</p>
+    <h2>通知・外部連携の自動化</h2>
+    <p class="lead">「気づいたら対応が遅れていた」を、人の注意力ではなく仕組みでなくします。</p>
+    <div class="svc-group">
+
+      <div class="card svc">
+        <h3>フォーム回答の整形・記録・通知</h3>
+        <p class="svc-sub">回答の表記ゆれを整えてシートに記録し、メールやチャットへ自動で通知します。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック</div>
+            <p class="plan-desc">フォーム送信をきっかけにシートへ追記＋メール通知。</p>
+            <div class="plan-foot"><span class="plan-term">納期 3日</span><span class="plan-price">¥15,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">表記ゆれの正規化・重複検出＋メール／Slack通知。文面のカスタマイズ込み。</p>
+            <div class="plan-foot"><span class="plan-term">納期 5日</span><span class="plan-price">¥25,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">複数フォーム対応＋担当者への振り分け＋未対応リマインド。設定シート付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 7日</span><span class="plan-price">¥40,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　LINE通知の追加 +¥8,000 ／ Chatwork通知の追加 +¥8,000</p>
+      </div>
+
+      <div class="card svc">
+        <h3>メール・チャットへの通知の自動化</h3>
+        <p class="svc-sub">期限リマインド、定期レポート、問い合わせの取りこぼし防止を仕組みで解決します。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック</div>
+            <p class="plan-desc">1つの条件で1つの宛先へ定期通知（日次・週次など）。</p>
+            <div class="plan-foot"><span class="plan-term">納期 3日</span><span class="plan-price">¥12,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">複数条件の振り分け通知＋文面のテンプレート化。送信ログ付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 5日</span><span class="plan-price">¥22,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">複数サービスの連携＋未対応時の再通知（エスカレーション）まで構築。</p>
+            <div class="plan-foot"><span class="plan-term">納期 10日</span><span class="plan-price">¥40,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　通知先の追加1件 +¥5,000</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="cat04">
+  <div class="wrap">
+    <p class="eyebrow">04</p>
+    <h2>データ収集・情報整理の自動化</h2>
+    <p class="lead">公開されている情報を定期的に集め、そのまま使える形に整理して蓄積します。</p>
+    <div class="svc-group">
+
+      <div class="card svc">
+        <h3>公開データの収集・定期取得</h3>
+        <p class="svc-sub">収集とCSV保存を自動化します。取得先の利用規約と負荷に配慮した設計で作ります。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック</div>
+            <p class="plan-desc">1サイト・固定項目の取得とCSV保存。</p>
+            <div class="plan-foot"><span class="plan-term">納期 5日</span><span class="plan-price">¥20,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">複数ページの巡回＋差分の更新＋取得エラーのログ。</p>
+            <div class="plan-foot"><span class="plan-term">納期 10日</span><span class="plan-price">¥40,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">定期実行・通知連携・データ蓄積まで一式。運用手順書付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 14日</span><span class="plan-price">¥70,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　取得対象サイトの追加1件 +¥12,000</p>
+      </div>
+
       <div class="card">
-        <h3>データ収集・情報整理の自動化</h3>
+        <h3>収集したデータの集約・レポート化</h3>
+        <p class="svc-sub">取得元や出力形式によって幅があるため、個別にお見積もりします。</p>
         <ul class="price-list">
           <li><span class="price-name">価格・在庫・競合情報の定期取得</span><span class="price-value">¥30,000〜</span></li>
           <li><span class="price-name">複数サイト・フォームからのデータ集約</span><span class="price-value">¥35,000〜</span></li>
           <li><span class="price-name">収集結果の自動レポート化</span><span class="price-value">¥25,000〜</span></li>
         </ul>
       </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="cat05">
+  <div class="wrap">
+    <p class="eyebrow">05</p>
+    <h2>既存ツールの引き継ぎ・改修</h2>
+    <p class="lead">作った人がもういない、仕様書も残っていない——という状態でも、現物から読み解いて引き継ぎます。</p>
+    <div class="svc-group">
+
+      <div class="card svc">
+        <h3>既存ツールの改修・不具合修正</h3>
+        <p class="svc-sub">他の方が作られたものでも対応します。まず現状を調べ、直せる範囲をお伝えしてから着手します。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック（軽微）</div>
+            <p class="plan-desc">1箇所の不具合修正、または小さな機能追加。</p>
+            <div class="plan-foot"><span class="plan-term">納期 2日</span><span class="plan-price">¥10,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">複数箇所の修正＋動作確認。修正内容の説明書付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 5日</span><span class="plan-price">¥20,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">全体の見直しと整理、同じ不具合が再発しない作りへの改善まで。</p>
+            <div class="plan-foot"><span class="plan-term">納期 10日</span><span class="plan-price">¥40,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　引き継ぎ資料（仕様書）の作成 +¥15,000</p>
+      </div>
+
+      <div class="card svc">
+        <h3>Accessの変換・移行（mdb→accdb）</h3>
+        <p class="svc-sub">仕様書があればそのまま、なくても現物から読み解いて移行します。SQL Server連携も可能です。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック（単純移行）</div>
+            <p class="plan-desc">1テーブル（20項目程度）の登録・照会画面を変換。動作確認済みで納品。</p>
+            <div class="plan-foot"><span class="plan-term">納期 3日</span><span class="plan-price">¥18,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">1テーブル＋サブフォームまたは帳票1本。参照設定・接続まわりの調整込み。</p>
+            <div class="plan-foot"><span class="plan-term">納期 5日</span><span class="plan-price">¥28,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（複数テーブル）</div>
+            <p class="plan-desc">3テーブル＋帳票。画面間の連携と権限まわりの調整、操作手順書付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 10日</span><span class="plan-price">¥48,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　追加1テーブルあたり +¥12,000 ／ 帳票1本追加 +¥10,000</p>
+      </div>
+
+      <div class="card svc">
+        <h3>WordPressサイトのスポット対応</h3>
+        <p class="svc-sub">表示崩れ・更新エラー・プラグインの不具合などを1件単位で対応します（月額契約はありません）。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック（1件対応）</div>
+            <p class="plan-desc">不具合1件の調査と修正。原因と対処の報告付き。</p>
+            <div class="plan-foot"><span class="plan-term">納期 3日</span><span class="plan-price">¥10,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">不具合の修正＋プラグイン／PHPの更新対応。事前バックアップ込み。</p>
+            <div class="plan-foot"><span class="plan-term">納期 5日</span><span class="plan-price">¥20,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（点検込み）</div>
+            <p class="plan-desc">修正＋サイト全体の点検（速度・エラー・更新状況）と改善提案書。</p>
+            <div class="plan-foot"><span class="plan-term">納期 10日</span><span class="plan-price">¥35,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　テスト環境での事前検証 +¥10,000</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="cat06">
+  <div class="wrap">
+    <p class="eyebrow">06</p>
+    <h2>要件整理・設計・ドキュメント</h2>
+    <p class="lead">作る前の「何を作るか」を決める工程、作った後の「どう使うか」を残す工程だけでもお引き受けします。開発をほかの会社に依頼される場合でも構いません。</p>
+    <div class="svc-group">
+
+      <div class="card svc">
+        <h3>要件整理・設計書の作成</h3>
+        <p class="svc-sub">曖昧なご要望を、そのまま発注できる仕様に落とし込みます。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック（要件整理）</div>
+            <p class="plan-desc">お打ち合わせを踏まえた要件一覧と機能一覧（ID付き）を作成。</p>
+            <div class="plan-foot"><span class="plan-term">納期 5日</span><span class="plan-price">¥20,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード（基本設計）</div>
+            <p class="plan-desc">画面・権限・状態遷移・受け入れ基準まで含む基本設計書を作成。</p>
+            <div class="plan-foot"><span class="plan-term">納期 10日</span><span class="plan-price">¥40,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（詳細設計）</div>
+            <p class="plan-desc">基本設計＋クラス構成・データ設計・テスト設計まで。発注用の資料として使えます。</p>
+            <div class="plan-foot"><span class="plan-term">納期 21日</span><span class="plan-price">¥80,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　開発会社への発注支援（見積比較の観点整理） +¥20,000</p>
+      </div>
+
+      <div class="card svc">
+        <h3>業務マニュアル・操作手順書の作成</h3>
+        <p class="svc-sub">初めて触る人が迷わない粒度で書きます。画面キャプチャの作成も含みます。</p>
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-name">ベーシック（簡易）</div>
+            <p class="plan-desc">10ページ程度の操作手順書（画面キャプチャ付き）。</p>
+            <div class="plan-foot"><span class="plan-term">納期 5日</span><span class="plan-price">¥10,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">スタンダード</div>
+            <p class="plan-desc">20ページ程度＋よくあるトラブル対応。Word／PDFで納品。</p>
+            <div class="plan-foot"><span class="plan-term">納期 10日</span><span class="plan-price">¥20,000</span></div>
+          </div>
+          <div class="plan">
+            <div class="plan-name">プレミアム（本格）</div>
+            <p class="plan-desc">40ページ程度＋業務フロー図＋権限別の手順。改訂しやすい構成で作成。</p>
+            <div class="plan-foot"><span class="plan-term">納期 21日</span><span class="plan-price">¥35,000</span></div>
+          </div>
+        </div>
+        <p class="svc-opt"><strong>オプション</strong>　動画マニュアル（5分程度）の作成 +¥20,000</p>
+      </div>
+
       <div class="card">
-        <h3>AI連携・ちょっとしたツール開発</h3>
+        <h3>業務そのものの見直し</h3>
+        <p class="svc-sub">自動化に限らず、業務フローや文書の扱い方そのものを見直すご相談も承ります。</p>
         <ul class="price-list">
-          <li><span class="price-name">問い合わせ内容の分類・返信下書き作成</span><span class="price-value">¥50,000〜</span></li>
+          <li><span class="price-name">業務フローの整理・可視化</span><span class="price-value">¥30,000〜</span></li>
+          <li><span class="price-name">文書管理・ファイリング体制の見直し</span><span class="price-value">¥40,000〜</span></li>
+          <li><span class="price-name">ペーパーレス化のご提案</span><span class="price-value">¥40,000〜</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="cat07">
+  <div class="wrap">
+    <p class="eyebrow">07</p>
+    <h2>AI活用による業務改善</h2>
+    <p class="lead">生成AIを業務に組み込む部分と、開発そのものにAIを使って小さく速く作る部分の、両方でご支援します。判断や文章作成が絡むために自動化をあきらめていた作業が対象です。</p>
+    <div class="svc-group">
+      <div class="card">
+        <h3>AI連携ツールの開発</h3>
+        <p class="svc-sub">対象となる文書・データの性質によって難易度が変わるため、個別にお見積もりします。</p>
+        <ul class="price-list">
+          <li><span class="price-name">問い合わせ内容の分類・返信下書きの作成</span><span class="price-value">¥50,000〜</span></li>
           <li><span class="price-name">文書・データの要約や整形の自動化</span><span class="price-value">¥30,000〜</span></li>
           <li><span class="price-name">社内用の簡易Webツール・フォーム構築</span><span class="price-value">¥60,000〜</span></li>
         </ul>
+        <p class="price-note">開発にはAIコーディング支援ツールを活用しています。そのぶん小規模なご依頼でも、設計書を残した上で無理のない価格でお引き受けできます。</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="cat08">
+  <div class="wrap">
+    <p class="eyebrow">08</p>
+    <h2>保守・導入サポート</h2>
+    <div class="grid2">
       <div class="card">
         <h3>保守・追加改修</h3>
         <ul class="price-list">
           <li><span class="price-name">月額保守(軽微な修正対応)</span><span class="price-value">¥5,000〜/月</span></li>
           <li><span class="price-name">スポット改修</span><span class="price-value">¥10,000〜/件</span></li>
         </ul>
+        <p class="price-note">納品後の保守契約は任意です。必要になった時点でご相談いただく形でも構いません。</p>
       </div>
       <div class="card">
         <h3>現地サポート(大阪近辺)</h3>
@@ -99,13 +528,57 @@
           <li><span class="price-name">基本(1時間程度・近距離)</span><span class="price-value">¥8,000〜</span></li>
           <li><span class="price-name">遠方対応</span><span class="price-value">交通費実費加算</span></li>
         </ul>
-        <p class="price-note">トリガー再設定など引き渡し作業の対面サポートです。ご希望の場合のみのオプションです。</p>
+        <p class="price-note">定期実行の再設定など、引き渡し作業の対面サポートです。ご希望の場合のみのオプションです。</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="spotlight-card">
+<section class="alt" id="other">
+  <div class="wrap">
+    <p class="eyebrow">OTHER</p>
+    <h2>ご相談ベースでお引き受けできること</h2>
+    <p class="lead">上の一覧には収まらないものの、これまでの実務で扱ってきた領域です。定型のプランはありませんので、内容をお聞きした上で個別にお見積もりします。「これは頼めるだろうか」という段階でお声がけください。</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>文書・証跡まわり</h3>
+        <ul class="price-list">
+          <li><span class="price-name">PDFへの電子署名・タイムスタンプの一括付与ツール</span><span class="price-value">¥80,000〜</span></li>
+          <li><span class="price-name">Office文書→PDFの一括変換、PDFの分割・結合の自動化</span><span class="price-value">¥30,000〜</span></li>
+          <li><span class="price-name">文書管理規程・フォルダ／命名ルールの設計</span><span class="price-value">¥40,000〜</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>引き継ぎ・棚卸し</h3>
+        <ul class="price-list">
+          <li><span class="price-name">仕様書のない既存ツールの調査と仕様書化</span><span class="price-value">¥50,000〜</span></li>
+          <li><span class="price-name">複雑化したExcelの数式・シート構成の整理</span><span class="price-value">¥25,000〜</span></li>
+          <li><span class="price-name">Google Workspaceの共有・権限設定の棚卸し</span><span class="price-value">¥30,000〜</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>運用の仕組みづくり</h3>
+        <ul class="price-list">
+          <li><span class="price-name">定期実行の運用設計・失敗検知の仕組みづくり</span><span class="price-value">¥30,000〜</span></li>
+          <li><span class="price-name">既存システムからのデータ移行・形式変換</span><span class="price-value">¥30,000〜</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>社内でのAI活用の立ち上げ</h3>
+        <ul class="price-list">
+          <li><span class="price-name">生成AI導入の伴走支援(使い方の型づくり)</span><span class="price-value">¥60,000〜</span></li>
+          <li><span class="price-name">社内向けの利用ルール・注意点の整理</span><span class="price-value">¥40,000〜</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="compliance">
+  <div class="wrap">
+    <div class="spotlight-card soft" style="margin-top:0">
       <p class="eyebrow">EXPERTISE</p>
-      <h2>電子帳簿保存法対応(専門分野)</h2>
+      <h2>電子帳簿保存法対応</h2>
       <p class="lead">電子認証局の運用管理に携わった経験を活かし、電子取引データ保存の要件整理をご相談いただけます。個人事業主・小規模企業ではタイムスタンプなしで対応できるケースも多く、無理のない方法をご提案します。</p>
       <ul class="price-list" style="margin-top:26px">
         <li><span class="price-name">要件整理・運用設計</span><span class="price-value">¥100,000〜</span></li>
@@ -113,10 +586,10 @@
         <li><span class="price-name">保存要件を満たすシステム構築</span><span class="price-value">¥100,000〜</span></li>
       </ul>
       <p class="price-note">要件の複雑さにより金額は上昇します。まずは現状をお聞かせください。</p>
-      <p style="margin-top:22px"><a class="link-underline" href="compliance.html" style="color:#6BB6E8">電子帳簿保存法対応について詳しく見る →</a></p>
+      <p style="margin-top:22px"><a class="link-underline" href="compliance.html" style="color:var(--accent-deep)">電子帳簿保存法対応について詳しく見る →</a></p>
     </div>
 
-    <div class="spotlight-card" style="margin-top:24px">
+    <div class="spotlight-card soft" style="margin-top:24px" id="timestamp">
       <p class="eyebrow">EXPERTISE</p>
       <h2>タイムスタンプ導入支援(知財保護)</h2>
       <p class="lead">アイデア・デザイン・企画書などの「いつ作ったか」を証拠として残したい場面での、タイムスタンプ活用をご支援します。</p>
@@ -125,8 +598,20 @@
         <li><span class="price-name">スポットでの証拠保全相談(単発案件)</span><span class="price-value">¥30,000〜</span></li>
       </ul>
       <p class="price-note">要件の複雑さにより金額は上昇します。まずは現状をお聞かせください。</p>
-      <p style="margin-top:22px"><a class="link-underline" href="timestamp.html" style="color:#6BB6E8">タイムスタンプ導入支援について詳しく見る →</a></p>
+      <p style="margin-top:22px"><a class="link-underline" href="timestamp.html" style="color:var(--accent-deep)">タイムスタンプ導入支援について詳しく見る →</a></p>
     </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap-narrow">
+    <h2>お見積もりについて</h2>
+    <ul style="margin:20px 0 0;padding-left:1.15em;color:var(--text-muted);font-size:14.5px;display:flex;flex-direction:column;gap:8px">
+      <li>記載の価格はすべて税抜です。お見積もりの時点で費用はいただきません。</li>
+      <li>納期はご依頼内容が確定した日からの日数です。ご確認・ご返信をお待ちする期間は含みません。</li>
+      <li>プランの範囲を超えるご依頼、記載のないご依頼は、内容をお聞きした上で個別にお見積もりします。</li>
+      <li>数百人規模の同時アクセスが発生する基幹システムや、24時間365日のSLA保守契約が必要な大規模開発は対象外としています。</li>
+    </ul>
   </div>
 </section>
 
@@ -134,7 +619,7 @@
   <div class="wrap" style="text-align:center">
     <p class="eyebrow">CONTACT</p>
     <h2>まずはお気軽にご相談ください</h2>
-    <p class="lead" style="margin:0 auto 26px">お見積もりの時点では費用はいただいておりません。現在の運用方法と困りごとをお聞かせください。</p>
+    <p class="lead" style="margin:0 auto 26px">「どのプランに当てはまるか分からない」という段階で構いません。現在の運用方法と困りごとをお聞かせください。</p>
     <a class="btn" href="contact.html">お問い合わせ・ご相談はこちら</a>
   </div>
 </section>
