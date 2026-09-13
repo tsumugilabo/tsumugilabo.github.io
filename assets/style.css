@@ -225,6 +225,7 @@ section.deep .lead { color: var(--text-muted-on-deep); }
 }
 
 /* ---- grids / cards ---- */
+.grid1 { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 30px; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
 .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }
 .grid4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 30px; }
@@ -351,6 +352,30 @@ section.alt .faq details { background: var(--bg); }
   color: var(--text-muted);
   border-radius: 0 12px 12px 0;
 }
+
+/* ---- pricing ---- */
+.price-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.price-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 14.5px; }
+.price-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.price-list .price-name { color: var(--text); }
+.price-list .price-value { color: var(--accent-deep); font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.price-note { font-size: 13px; color: var(--text-muted); margin-top: 14px; }
+
+.spotlight-card {
+  background: var(--surface-deep);
+  color: var(--text-on-deep);
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 40px;
+}
+@media (max-width: 640px) { .spotlight-card { padding: 30px 24px; } }
+.spotlight-card h2, .spotlight-card h3 { color: var(--text-on-deep); }
+.spotlight-card .lead { color: var(--text-muted-on-deep); }
+.spotlight-card .eyebrow { color: #6BB6E8; }
+.spotlight-card .price-list li { border-bottom-color: var(--border-on-deep); }
+.spotlight-card .price-list .price-name { color: var(--text-on-deep); }
+.spotlight-card .price-list .price-value { color: #6BB6E8; }
+.spotlight-card .price-note { color: var(--text-muted-on-deep); }
 
 /* ---- footer ---- */
 footer.site-footer {
