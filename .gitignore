@@ -2,3 +2,6 @@
 /img/
 # Local scratch/draft files
 /html_txt/
+
+# Claude Code local instructions (Vault index; not published)
+CLAUDE.local.md
