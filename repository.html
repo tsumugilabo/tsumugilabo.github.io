@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>リポジトリ(TSUMUGIタイムスタンプサービス) | TSUMUGI Labo.</title>
+<meta name="description" content="TSUMUGIタイムスタンプサービスの運用規程・認証局証明書・失効情報と、タイムスタンプを第三者が検証するための技術情報を公開しています。">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="stylesheet" href="assets/style.css">
+<meta name="google-site-verification" content="kSdy159pIdwHEnRBO0bnf6LD9IYcdgQYBSwCVTkgTps" />
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b5a58d1b0ca94e57b76e3a94978e9e5e"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="assets/mark.svg" alt="" width="26" height="27">
+      <span>TSUMUGI Labo.</span>
+    </a>
+    <nav class="sitenav">
+      <a href="index.html">ホーム</a>
+      <a href="service.html">サービス</a>
+      <a href="pricing.html">料金</a>
+      <a href="reasons.html">選ばれる理由</a>
+      <a href="flow.html">流れ</a>
+      <a href="faq.html">FAQ</a>
+      <a href="profile.html">事業沿革</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero wrap">
+  <p class="eyebrow">REPOSITORY</p>
+  <h1>TSUMUGIタイムスタンプサービス リポジトリ</h1>
+  <p class="lead" style="margin:14px auto 0">運用規程・認証局証明書・失効情報と、タイムスタンプを第三者が検証するための技術情報を公開しています。</p>
+  <div class="chip-row">
+    <a class="chip" href="#news">お知らせ</a>
+    <a class="chip" href="#documents">文書</a>
+    <a class="chip" href="#time">時刻の裏付け</a>
+    <a class="chip" href="#ca">認証局証明書・CRL</a>
+    <a class="chip" href="#cert-profile">証明書プロファイル</a>
+    <a class="chip" href="#token-profile">トークンのプロファイル</a>
+    <a class="chip" href="#oid">OID</a>
+    <a class="chip" href="#registration">利用登録</a>
+  </div>
+</div>
+
+<section id="news">
+  <div class="wrap">
+    <p class="eyebrow">NEWS</p>
+    <h2>お知らせ</h2>
+    <ul class="news-list">
+      <li><span class="news-date">2026年9月28日</span><span>リポジトリを開設しました。サービスの提供開始前のため、各文書は0.1版（草案）です。</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="documents" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">DOCUMENTS</p>
+    <h2>文書</h2>
+    <p style="color:var(--text-muted)">改訂した場合も、過去の版は削除せずに掲載します。</p>
+    <div class="doc-list">
+      <div class="card doc">
+        <h3>タイムスタンプサービス運用規程</h3>
+        <p>サービスの運用と認証局の運営に関する規程です（CP/CPS相当）。</p>
+        <ul class="doc-versions">
+          <li><a class="link-underline" href="repository/tsumugi-tsa-policy_01.pdf">0.1版（草案）PDF</a><span>2026年9月28日</span></li>
+        </ul>
+      </div>
+      <div class="card doc">
+        <h3>TSUMUGI Timestamp Client利用規約</h3>
+        <p>利用の条件と免責を定めます。</p>
+        <ul class="doc-versions">
+          <li><a class="link-underline" href="repository/tsumugi-terms_01.pdf">0.1版（草案）PDF</a><span>2026年9月28日</span></li>
+        </ul>
+      </div>
+      <div class="card doc">
+        <h3>TSUMUGIタイムスタンプ検証手順書</h3>
+        <p>当方のツールを使わずに、タイムスタンプを検証する手順です。</p>
+        <ul class="doc-versions">
+          <li><a class="link-underline" href="repository/tsumugi-verification_01.pdf">0.1版（草案）PDF</a><span>2026年9月28日</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="repo">
+  <div class="wrap">
+    <p class="eyebrow">TECHNICAL INFORMATION</p>
+    <h2>技術情報</h2>
+    <p>本ページの値は、タイムスタンプの検証に用いるものです。検証の手順は「TSUMUGIタイムスタンプ検証手順書」をご覧ください。</p>
+
+    <h3 id="time">1.時刻の裏付け</h3>
+    <p>TSUMUGIタイムスタンプサービスは、総務大臣の認定を受けた時刻配信事業者による時刻監査を用いません。これに代えて、タイムスタンプの生成のたびに対象データのハッシュ値を公開透明性ログへ登録し、第三者であるwitnessの連署により登録の時刻を裏付けます（運用規程4.8）。検証に必要な値は次のとおりです。</p>
+
+    <h4>1.1.時刻源</h4>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>項目</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td>時刻源</td><td>国立研究開発法人情報通信研究機構（NICT）が配信する日本標準時（ntp.nict.jp）</td></tr>
+        <tr><td>取得の方式</td><td>SNTP v4（UDP 123）。タイムスタンプの生成のたびに問い合わせる。利用者の計算機の時計は用いない</td></tr>
+        <tr><td>照合の許容差</td><td>300秒。トークンに記録する時刻とwitnessの連署の時刻の差がこれを超える場合、タイムスタンプを生成しない</td></tr>
+      </tbody>
+    </table></div>
+    <p>時刻源との通信は経路の認証を伴わないため、取得した時刻それ自体は時刻の裏付けではありません（運用規程4.7）。裏付けは次の公開透明性ログとwitnessの連署が与えます。</p>
+
+    <h4>1.2.公開透明性ログ</h4>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>項目</th><th>値</th></tr></thead>
+      <tbody>
+        <tr><td>ログ</td><td>Sigstore Rekor v2</td></tr>
+        <tr><td>識別子（origin）</td><td><code>log2025-1.rekor.sigstore.dev</code></td></tr>
+        <tr><td>URL</td><td><code>https://log2025-1.rekor.sigstore.dev</code></td></tr>
+        <tr><td>公開鍵（Ed25519、SubjectPublicKeyInfoのbase64）</td><td><code>MCowBQYDK2VwAyEAt8rlp1knGwjfbcXAYPYAkn0XiLz1x8O4t0YkEhie244=</code></td></tr>
+        <tr><td>keyId（base64）</td><td><code>zxGZFVvd0FEmjR8WrFwMdcAJ9vtaY/QXf44Y1wUeP6A=</code></td></tr>
+        <tr><td>ログの有効期間の開始</td><td>2025年9月23日（UTC）</td></tr>
+        <tr><td>出典</td><td>SigstoreのTUFリポジトリ（<code>https://tuf-repo-cdn.sigstore.dev</code>）が配布する<code>trusted_root.json</code></td></tr>
+      </tbody>
+    </table></div>
+    <p>keyIdは<code>SHA-256(origin || 0x0A || 0x01 || 公開鍵32バイト)</code>です。その先頭4バイトが、checkpointのログの署名行のkeyhintです。</p>
+    <p>Sigstoreはログを年ごとに切り替えます。新しいログを用い始めたときは、この表に追記し、お知らせで告知します。以前のログの鍵は、それ以前に生成したタイムスタンプの検証のため、引き続き掲載します。</p>
+
+    <h4>1.3. witness</h4>
+    <p>当方が信頼対象とするwitnessは次のとおりです。いずれも運営者が試験運用（staging）と位置付けるものです。本番運用のwitnessは、2026年9月現在、存在しません（運用規程4.8）。</p>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>名称</th><th>公開鍵（vkey）</th><th>信頼対象とした日</th><th>出典</th></tr></thead>
+      <tbody>
+        <tr><td><code>witness.navigli.sunlight.geomys.org</code></td><td><code>witness.navigli.sunlight.geomys.org+a3e00fe2+BNy/co4C1Hn1p+INwJrfUlgz7W55dSZReusH/GhUhJ/G</code></td><td>2026年9月24日</td><td>navigli.sunlight.geomys.org</td></tr>
+        <tr><td><code>witness.stagemole.eu</code></td><td><code>witness.stagemole.eu+67f7aea0+BEqSG3yu9YrmcM3BHvQYTxwFj3uSWakQepafafpUqklv</code></td><td>2026年9月24日</td><td>witness.stagemole.eu/about</td></tr>
+        <tr><td><code>staging.witness.transparency.goog/ring-any-bells</code></td><td><code>staging.witness.transparency.goog/ring-any-bells+2e1a8dc9+BG5JTpLc3FJtwzgh1Uv+Qelz9qeOH2bfWjS1s0s+y4rL</code></td><td>2026年9月24日</td><td>transparency.dev/witnesses/</td></tr>
+      </tbody>
+    </table></div>
+    <ul class="repo-notes">
+      <li>vkeyは<code>&lt;名称&gt;+&lt;keyhint（8桁の16進）&gt;+&lt;base64&gt;</code>の形です。base64の部分をデコードした33バイトのうち、先頭1バイト（0x04）は署名の種類（cosignature/v1のEd25519）、残る32バイトが公開鍵です</li>
+      <li>keyhintは<code>SHA-256(名称 || 0x0A || 0x04 || 公開鍵32バイト)</code>の先頭4バイトです。名称は<code>/</code>以降を含めた全体です</li>
+      <li>連署の時刻は、有効な連署のうち最も早いものを用います。有効な連署が1つ以上あれば足ります</li>
+      <li>本番運用のwitness、又はSigstoreが信頼対象として配布するwitnessが利用可能となった場合は、この表に追記し、お知らせで告知します。信頼対象から外したwitnessも、外した日を記して掲載を続けます</li>
+    </ul>
+
+    <h4>1.4. checkpointの署名対象</h4>
+    <p>checkpointはC2SPのsigned note形式です。1行目がログの識別子、2行目がツリーの大きさ、3行目がroot hash（base64）で、空行の後に署名行が続きます。</p>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>署名者</th><th>署名の対象</th><th>署名行のbase64をデコードした中身</th></tr></thead>
+      <tbody>
+        <tr><td>ログ</td><td>1行目から3行目まで（各行末のLFを含み、空行を含まない）</td><td>keyhint 4バイト＋Ed25519署名64バイト（68バイト）。時刻を含まない</td></tr>
+        <tr><td>witness</td><td><code>cosignature/v1</code>の行、<code>time &lt;秒&gt;</code>の行、続けて1行目から3行目まで</td><td>keyhint 4バイト＋時刻8バイト（UNIX秒、ビッグエンディアン）＋Ed25519署名64バイト（76バイト）</td></tr>
+      </tbody>
+    </table></div>
+    <p>包含証明はRFC 6962 2.1.1に従います。詳細は検証手順書の第6章をご覧ください。</p>
+
+    <h3 id="ca">2.認証局証明書・CRL</h3>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>配布物</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td>ルート認証局証明書</td><td><a class="link-underline" href="https://tsumugi-ca-issuer.tsumugilabo.workers.dev/ca/root.cer"><code>https://tsumugi-ca-issuer.tsumugilabo.workers.dev/ca/root.cer</code></a></td></tr>
+        <tr><td>中間認証局証明書</td><td><a class="link-underline" href="https://tsumugi-ca-issuer.tsumugilabo.workers.dev/ca/intermediate.cer"><code>https://tsumugi-ca-issuer.tsumugilabo.workers.dev/ca/intermediate.cer</code></a></td></tr>
+        <tr><td>ルート認証局CRL</td><td><a class="link-underline" href="https://tsumugi-ca-issuer.tsumugilabo.workers.dev/crl/root.crl"><code>https://tsumugi-ca-issuer.tsumugilabo.workers.dev/crl/root.crl</code></a></td></tr>
+        <tr><td>中間認証局CRL</td><td><a class="link-underline" href="https://tsumugi-ca-issuer.tsumugilabo.workers.dev/crl/intermediate.crl"><code>https://tsumugi-ca-issuer.tsumugilabo.workers.dev/crl/intermediate.crl</code></a></td></tr>
+      </tbody>
+    </table></div>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>項目</th><th>ルート認証局</th><th>中間認証局</th></tr></thead>
+      <tbody>
+        <tr><td>主体者名</td><td>CN = TSUMUGI Labo. Timestamp Root CA</td><td>CN = TSUMUGI Labo. Timestamp Issuing CA 1</td></tr>
+        <tr><td>有効期間（日本標準時）</td><td>2026年9月26日1時37分53秒から2046年9月26日1時37分53秒まで</td><td>2026年9月26日1時42分15秒から2036年9月25日1時42分15秒まで</td></tr>
+        <tr><td>証明書のSHA-256指紋</td><td><code>28:2D:E5:63:C6:28:E4:10:33:04:39:43:70:95:3F:94:ED:6E:5B:D2:88:AA:F9:16:1C:F8:55:CB:07:C1:A7:36</code></td><td><code>22:00:4F:D9:A8:69:31:50:32:86:DE:F3:9C:96:64:A9:3B:1D:41:D5:37:AF:28:7D:46:41:45:52:36:99:B5:88</code></td></tr>
+        <tr><td>公開鍵情報（SPKI）のSHA-256指紋</td><td><code>85:EF:95:84:FF:F6:38:6F:94:35:67:0C:90:13:8A:4A:2F:D3:FC:01:F6:D8:B2:9D:F0:0E:38:BD:D3:7E:15:8A</code></td><td><code>F7:4C:A2:62:4D:B2:7E:B7:84:DD:01:C4:26:AF:BD:D8:EE:F3:58:47:12:B7:CD:17:A8:D9:A4:0B:42:0E:71:DB</code></td></tr>
+      </tbody>
+    </table></div>
+    <p>ルート認証局証明書の真正性は、このページではなく、運用規程2.5.5に記載の指紋で確かめてください。</p>
+    <p>中間認証局のCRLは1日1回再署名します。ルート認証局のCRLは有効期間1年で、失効の発生時と、次回更新日の60日前までに再署名します（運用規程2.5.2）。</p>
+    <p>TSA証明書は利用者の導入ごとに発行し、タイムスタンプトークンに同梱されるため、一覧は公開しません。失効の有無は中間認証局のCRLで確認してください。</p>
+
+    <h3 id="cert-profile">3.証明書プロファイル</h3>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>項目</th><th>ルート認証局</th><th>中間認証局</th><th>TSA</th></tr></thead>
+      <tbody>
+        <tr><td>版</td><td>X.509 v3</td><td>X.509 v3</td><td>X.509 v3</td></tr>
+        <tr><td>主体者名</td><td>CN = TSUMUGI Labo. Timestamp Root CA</td><td>CN = TSUMUGI Labo. Timestamp Issuing CA 1</td><td>CN = TSUMUGI Timestamp TSA＋導入ごとの識別子</td></tr>
+        <tr><td>公開鍵</td><td>ECDSA P-384</td><td>ECDSA P-384</td><td>ECDSA P-256</td></tr>
+        <tr><td>署名アルゴリズム</td><td>ECDSA with SHA-384</td><td>ECDSA with SHA-384</td><td>ECDSA with SHA-384</td></tr>
+        <tr><td>有効期間</td><td>20年</td><td>10年</td><td>2年</td></tr>
+        <tr><td>basicConstraints</td><td>critical、CA:TRUE</td><td>critical、CA:TRUE、pathlen:0</td><td>critical、CA:FALSE</td></tr>
+        <tr><td>keyUsage</td><td>critical、keyCertSign、cRLSign</td><td>critical、keyCertSign、cRLSign</td><td>critical、digitalSignature</td></tr>
+        <tr><td>extendedKeyUsage</td><td>—</td><td>—</td><td>critical、id-kp-timeStampingのみ</td></tr>
+        <tr><td>CRL配布点</td><td>—</td><td>ルート認証局CRL</td><td>中間認証局CRL</td></tr>
+        <tr><td>認証局情報アクセス</td><td>—</td><td>ルート認証局証明書</td><td>中間認証局証明書</td></tr>
+        <tr><td>主体者鍵識別子・認証局鍵識別子</td><td>あり</td><td>あり</td><td>あり</td></tr>
+      </tbody>
+    </table></div>
+    <p>証明書署名要求が要求した拡張は採用しません。CRLはX.509 v2で、ECDSA with SHA-384により署名します。TSA証明書を鍵の危殆化により失効させた場合は、CRLのエントリに失効の理由（keyCompromise）と推定される危殆化の日時（invalidityDate）を記載します（運用規程4.6.2）。</p>
+
+    <h3 id="token-profile">4.タイムスタンプトークンのプロファイル</h3>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>項目</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td>規格</td><td>RFC 3161</td></tr>
+        <tr><td>ハッシュアルゴリズム</td><td>SHA-256</td></tr>
+        <tr><td>署名アルゴリズム</td><td>ECDSA with SHA-256（P-256）</td></tr>
+        <tr><td>ポリシーOID</td><td>1.3.6.1.4.1.66920.1.1</td></tr>
+        <tr><td>証明書の同梱</td><td>TSA証明書と中間認証局証明書。ルート認証局証明書は含まない</td></tr>
+        <tr><td>存在証明の格納場所</td><td>SignerInfoのunsigned attribute（1.3.6.1.4.1.66920.2.1）。値は1つのOCTET STRING</td></tr>
+        <tr><td>PDFへの格納</td><td>ISO 32000のドキュメントタイムスタンプ（<code>/SubFilter /ETSI.RFC3161</code>）</td></tr>
+        <tr><td>分離トークン</td><td><code>.tst</code>（TimeStampTokenのDER）</td></tr>
+      </tbody>
+    </table></div>
+    <p>存在証明（unsigned attributeのOCTET STRINGの中身）は次の構造のDERです。</p>
+<pre class="repo-code">TsumugiAnchorProof ::= SEQUENCE {
+    version       INTEGER (1),
+    logUrl        UTF8String,
+    retrievedAt   GeneralizedTime,
+    payloadType   OBJECT IDENTIFIER,  -- 1.3.6.1.4.1.66920.2.2
+    payload       OCTET STRING        -- Rekor v2 の応答（UTF-8 JSON）をそのまま
+}</pre>
+    <p>retrievedAtは生成時に記録した参考値で、時刻の裏付けではありません。payloadの各項目は検証手順書の6.1をご覧ください。</p>
+
+    <h3 id="oid">5.オブジェクト識別子（OID）</h3>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>OID</th><th>名称</th><th>用途</th></tr></thead>
+      <tbody>
+        <tr><td>1.3.6.1.4.1.66920</td><td>TSUMUGI Labo.</td><td>IANAが割り当てた私企業番号（Private Enterprise Number）</td></tr>
+        <tr><td>1.3.6.1.4.1.66920.1.1</td><td>タイムスタンプポリシー</td><td>トークンのTSTInfo.policy。運用規程に基づくトークンであることを示す</td></tr>
+        <tr><td>1.3.6.1.4.1.66920.2.1</td><td>存在証明添付属性</td><td>存在証明を格納するunsigned attributeの型</td></tr>
+        <tr><td>1.3.6.1.4.1.66920.2.2</td><td>Rekor v2エントリJSON</td><td>存在証明のpayloadType。payloadがRekor v2の応答JSONであることを示す</td></tr>
+      </tbody>
+    </table></div>
+    <p>開発版が暫定の弧1.3.6.1.4.1.99999で発行したトークンは、運用規程の適用対象外です（運用規程1.2.2）。</p>
+
+    <h3 id="registration">6.利用登録</h3>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>項目</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td>TSA証明書の発行数の上限</td><td>1の利用登録につき、直近365日で3件。更新、及び再導入・失効に伴う発行し直しを含む</td></tr>
+      </tbody>
+    </table></div>
+    <p>上限は運用規程4.1.1に基づくものです。</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand"><img src="assets/mark.svg" alt="" width="22" height="23"><span>TSUMUGI Labo.</span></div>
+      <p>Googleスプレッドシート・GASによる業務自動化、小規模業務システム構築から、データ収集・AI連携まで承っています。</p>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="service.html">サービス</a></li>
+        <li><a href="pricing.html">料金</a></li>
+        <li><a href="reasons.html">選ばれる理由</a></li>
+        <li><a href="flow.html">流れ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="profile.html">事業沿革</a></li>
+        <li><a href="repository.html">リポジトリ</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="mailto:tsumugilabo202608@gmail.com">tsumugilabo202608@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© TSUMUGI Labo.</div>
+</footer>
+
+</body>
+</html>

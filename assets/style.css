@@ -444,3 +444,28 @@ section[id], .spotlight-card[id] { scroll-margin-top: 64px; }
 .spotlight-card.soft .price-list .price-name { color: var(--text); }
 .spotlight-card.soft .price-list .price-value { color: var(--accent-deep); }
 .spotlight-card.soft .price-note { color: var(--text-muted); }
+
+/* ---- repository ---- */
+.news-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.news-list li { display: grid; grid-template-columns: 130px 1fr; gap: 16px; font-size: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+.news-date { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 560px) { .news-list li { grid-template-columns: 1fr; gap: 2px; } }
+.doc-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+@media (max-width: 760px) { .doc-list { grid-template-columns: 1fr; } }
+.card.doc { padding: 22px; display: flex; flex-direction: column; }
+.card.doc p { flex: 1; }
+.card ul.doc-versions { list-style: none; padding: 0; border-top: 1px solid var(--border); padding-top: 12px; }
+.doc-versions li { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.doc-versions span { font-size: 12.5px; color: var(--text-muted); }
+section.repo h3 { font-size: 21px; margin: 48px 0 14px; padding-top: 18px; border-top: 1px solid var(--border); scroll-margin-top: 64px; }
+section.repo h4 { font-size: 16px; margin: 28px 0 10px; }
+section.repo p, section.repo .repo-notes { font-size: 15px; }
+.table-scroll { overflow-x: auto; margin: 0 0 16px; }
+table.repo-table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.7; }
+.repo-table th, .repo-table td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; vertical-align: top; }
+.repo-table th { background: var(--surface); font-weight: 700; white-space: nowrap; }
+.repo-table td:first-child { min-width: 8em; }
+section.repo code { font-family: Consolas, "SFMono-Regular", Menlo, monospace; font-size: .9em; background: var(--surface); border-radius: 4px; padding: 1px 4px; word-break: break-all; }
+section.repo a code { background: none; padding: 0; }
+.repo-notes { color: var(--text); padding-left: 1.2em; margin: 0 0 1em; display: flex; flex-direction: column; gap: 6px; }
+pre.repo-code { background: var(--surface-deep); color: var(--text-on-deep); border-radius: 10px; padding: 16px 18px; overflow-x: auto; font-family: Consolas, "SFMono-Regular", Menlo, monospace; font-size: 13px; line-height: 1.6; margin: 0 0 16px; }
