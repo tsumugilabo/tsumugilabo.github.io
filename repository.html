@@ -126,7 +126,7 @@
 
     <h4>1.3. witness</h4>
     <p>当方が信頼対象とするwitnessは次のとおりです。いずれも運営者が試験運用（staging）と位置付けるものです。本番運用のwitnessは、2026年9月現在、存在しません（運用規程4.8）。</p>
-    <div class="table-scroll"><table class="repo-table">
+    <div class="table-scroll"><table class="repo-table wide">
       <thead><tr><th>名称</th><th>公開鍵（vkey）</th><th>信頼対象とした日</th><th>出典</th></tr></thead>
       <tbody>
         <tr><td><code>witness.navigli.sunlight.geomys.org</code></td><td><code>witness.navigli.sunlight.geomys.org+a3e00fe2+BNy/co4C1Hn1p+INwJrfUlgz7W55dSZReusH/GhUhJ/G</code></td><td>2026年9月24日</td><td>navigli.sunlight.geomys.org</td></tr>
@@ -143,7 +143,7 @@
 
     <h4>1.4. checkpointの署名対象</h4>
     <p>checkpointはC2SPのsigned note形式です。1行目がログの識別子、2行目がツリーの大きさ、3行目がroot hash（base64）で、空行の後に署名行が続きます。</p>
-    <div class="table-scroll"><table class="repo-table">
+    <div class="table-scroll"><table class="repo-table wide">
       <thead><tr><th>署名者</th><th>署名の対象</th><th>署名行のbase64をデコードした中身</th></tr></thead>
       <tbody>
         <tr><td>ログ</td><td>1行目から3行目まで（各行末のLFを含み、空行を含まない）</td><td>keyhint 4バイト＋Ed25519署名64バイト（68バイト）。時刻を含まない</td></tr>
@@ -162,13 +162,13 @@
         <tr><td>中間認証局CRL</td><td><a class="link-underline" href="https://tsumugi-ca-issuer.tsumugilabo.workers.dev/crl/intermediate.crl"><code>https://tsumugi-ca-issuer.tsumugilabo.workers.dev/crl/intermediate.crl</code></a></td></tr>
       </tbody>
     </table></div>
-    <div class="table-scroll"><table class="repo-table">
+    <div class="table-scroll"><table class="repo-table wide">
       <thead><tr><th>項目</th><th>ルート認証局</th><th>中間認証局</th></tr></thead>
       <tbody>
         <tr><td>主体者名</td><td>CN = TSUMUGI Labo. Timestamp Root CA</td><td>CN = TSUMUGI Labo. Timestamp Issuing CA 1</td></tr>
         <tr><td>有効期間（日本標準時）</td><td>2026年9月26日1時37分53秒から2046年9月26日1時37分53秒まで</td><td>2026年9月26日1時42分15秒から2036年9月25日1時42分15秒まで</td></tr>
-        <tr><td>証明書のSHA-256指紋</td><td><code>28:2D:E5:63:C6:28:E4:10:33:04:39:43:70:95:3F:94:ED:6E:5B:D2:88:AA:F9:16:1C:F8:55:CB:07:C1:A7:36</code></td><td><code>22:00:4F:D9:A8:69:31:50:32:86:DE:F3:9C:96:64:A9:3B:1D:41:D5:37:AF:28:7D:46:41:45:52:36:99:B5:88</code></td></tr>
-        <tr><td>公開鍵情報（SPKI）のSHA-256指紋</td><td><code>85:EF:95:84:FF:F6:38:6F:94:35:67:0C:90:13:8A:4A:2F:D3:FC:01:F6:D8:B2:9D:F0:0E:38:BD:D3:7E:15:8A</code></td><td><code>F7:4C:A2:62:4D:B2:7E:B7:84:DD:01:C4:26:AF:BD:D8:EE:F3:58:47:12:B7:CD:17:A8:D9:A4:0B:42:0E:71:DB</code></td></tr>
+        <tr><td>証明書のSHA-256指紋</td><td><code>28:<wbr>2D:<wbr>E5:<wbr>63:<wbr>C6:<wbr>28:<wbr>E4:<wbr>10:<wbr>33:<wbr>04:<wbr>39:<wbr>43:<wbr>70:<wbr>95:<wbr>3F:<wbr>94:<wbr>ED:<wbr>6E:<wbr>5B:<wbr>D2:<wbr>88:<wbr>AA:<wbr>F9:<wbr>16:<wbr>1C:<wbr>F8:<wbr>55:<wbr>CB:<wbr>07:<wbr>C1:<wbr>A7:<wbr>36</code></td><td><code>22:<wbr>00:<wbr>4F:<wbr>D9:<wbr>A8:<wbr>69:<wbr>31:<wbr>50:<wbr>32:<wbr>86:<wbr>DE:<wbr>F3:<wbr>9C:<wbr>96:<wbr>64:<wbr>A9:<wbr>3B:<wbr>1D:<wbr>41:<wbr>D5:<wbr>37:<wbr>AF:<wbr>28:<wbr>7D:<wbr>46:<wbr>41:<wbr>45:<wbr>52:<wbr>36:<wbr>99:<wbr>B5:<wbr>88</code></td></tr>
+        <tr><td>公開鍵情報（SPKI）のSHA-256指紋</td><td><code>85:<wbr>EF:<wbr>95:<wbr>84:<wbr>FF:<wbr>F6:<wbr>38:<wbr>6F:<wbr>94:<wbr>35:<wbr>67:<wbr>0C:<wbr>90:<wbr>13:<wbr>8A:<wbr>4A:<wbr>2F:<wbr>D3:<wbr>FC:<wbr>01:<wbr>F6:<wbr>D8:<wbr>B2:<wbr>9D:<wbr>F0:<wbr>0E:<wbr>38:<wbr>BD:<wbr>D3:<wbr>7E:<wbr>15:<wbr>8A</code></td><td><code>F7:<wbr>4C:<wbr>A2:<wbr>62:<wbr>4D:<wbr>B2:<wbr>7E:<wbr>B7:<wbr>84:<wbr>DD:<wbr>01:<wbr>C4:<wbr>26:<wbr>AF:<wbr>BD:<wbr>D8:<wbr>EE:<wbr>F3:<wbr>58:<wbr>47:<wbr>12:<wbr>B7:<wbr>CD:<wbr>17:<wbr>A8:<wbr>D9:<wbr>A4:<wbr>0B:<wbr>42:<wbr>0E:<wbr>71:<wbr>DB</code></td></tr>
       </tbody>
     </table></div>
     <p>ルート認証局証明書の真正性は、このページではなく、運用規程2.5.5に記載の指紋で確かめてください。</p>
@@ -176,7 +176,7 @@
     <p>TSA証明書は利用者の導入ごとに発行し、タイムスタンプトークンに同梱されるため、一覧は公開しません。失効の有無は中間認証局のCRLで確認してください。</p>
 
     <h3 id="cert-profile">3.証明書プロファイル</h3>
-    <div class="table-scroll"><table class="repo-table">
+    <div class="table-scroll"><table class="repo-table wide">
       <thead><tr><th>項目</th><th>ルート認証局</th><th>中間認証局</th><th>TSA</th></tr></thead>
       <tbody>
         <tr><td>版</td><td>X.509 v3</td><td>X.509 v3</td><td>X.509 v3</td></tr>
@@ -219,7 +219,7 @@
     <p>retrievedAtは生成時に記録した参考値で、時刻の裏付けではありません。payloadの各項目は検証手順書の6.1をご覧ください。</p>
 
     <h3 id="oid">5.オブジェクト識別子（OID）</h3>
-    <div class="table-scroll"><table class="repo-table">
+    <div class="table-scroll"><table class="repo-table wide">
       <thead><tr><th>OID</th><th>名称</th><th>用途</th></tr></thead>
       <tbody>
         <tr><td>1.3.6.1.4.1.66920</td><td>TSUMUGI Labo.</td><td>IANAが割り当てた私企業番号（Private Enterprise Number）</td></tr>

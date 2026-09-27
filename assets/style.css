@@ -465,7 +465,8 @@ table.repo-table { width: 100%; border-collapse: collapse; font-size: 14px; line
 .repo-table th, .repo-table td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; vertical-align: top; }
 .repo-table th { background: var(--surface); font-weight: 700; white-space: nowrap; }
 .repo-table td:first-child { min-width: 8em; }
-section.repo code { font-family: Consolas, "SFMono-Regular", Menlo, monospace; font-size: .9em; background: var(--surface); border-radius: 4px; padding: 1px 4px; word-break: break-all; }
+@media (max-width: 700px) { table.repo-table.wide { min-width: 620px; } }
+section.repo code { font-family: Consolas, "SFMono-Regular", Menlo, monospace; font-size: .9em; background: var(--surface); border-radius: 4px; padding: 1px 4px; overflow-wrap: anywhere; }
 section.repo a code { background: none; padding: 0; }
 .repo-notes { color: var(--text); padding-left: 1.2em; margin: 0 0 1em; display: flex; flex-direction: column; gap: 6px; }
 pre.repo-code { background: var(--surface-deep); color: var(--text-on-deep); border-radius: 10px; padding: 16px 18px; overflow-x: auto; font-family: Consolas, "SFMono-Regular", Menlo, monospace; font-size: 13px; line-height: 1.6; margin: 0 0 16px; }
