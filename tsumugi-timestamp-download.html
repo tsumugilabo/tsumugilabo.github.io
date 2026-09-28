@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TSUMUGI Timestamp Client のダウンロード | TSUMUGI Labo.</title>
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="stylesheet" href="assets/style.css">
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b5a58d1b0ca94e57b76e3a94978e9e5e"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="assets/mark.svg" alt="" width="26" height="27">
+      <span>TSUMUGI Labo.</span>
+    </a>
+    <nav class="sitenav">
+      <a href="index.html">ホーム</a>
+      <a href="service.html">サービス</a>
+      <a href="pricing.html">料金</a>
+      <a href="reasons.html">選ばれる理由</a>
+      <a href="flow.html">流れ</a>
+      <a href="faq.html">FAQ</a>
+      <a href="profile.html">事業沿革</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- R10c: 配布ページ。HP のどこからもリンクせず、sitemap.xml にも載せない（問い合わせた人に URL を知らせる）。
+     版を上げたら、版・ZIP の URL・SHA-256 をすべて書き換える。ZIP は releases/download/v<版>/ の固定 URL（latest は使わない）。 -->
+<div class="page-hero wrap">
+  <p class="eyebrow">DOWNLOAD</p>
+  <h1>TSUMUGI Timestamp Client</h1>
+  <p class="lead" style="margin:14px auto 0">PDF などのファイルにタイムスタンプを付け、検証する Windows 用のアプリです。最新版は <strong>0.3</strong>（2026年9月29日）です。</p>
+</div>
+
+<section class="repo">
+  <div class="wrap-narrow policy">
+    <h2>1. ダウンロード</h2>
+    <p><a class="btn" href="https://github.com/tsumugilabo/tsumugilabo.github.io/releases/download/v0.3/TSUMUGITimestamp-0.3-win-x64.zip">TSUMUGITimestamp-0.3-win-x64.zip をダウンロード</a></p>
+    <p>ZIP ファイルの SHA-256：</p>
+    <pre class="repo-code">6196506bc82406b3fd3917645e28cb365e2d18f9d892560570f775b045f30a04</pre>
+    <p>動作環境は Windows 10 / 11（64 ビット）と .NET 10 デスクトップ ランタイムです。詳しくは ZIP に同梱の「はじめにお読みください.pdf」をご覧ください。</p>
+
+    <h2>2. ファイルが本物か確かめる</h2>
+    <p>ダウンロードしたフォルダで PowerShell を開き、次のコマンドを実行してください。表示された Hash の値が、上の SHA-256 と一致することを確かめます（大文字・小文字の違いは問いません）。</p>
+    <pre class="repo-code">Get-FileHash .\TSUMUGITimestamp-0.3-win-x64.zip -Algorithm SHA256</pre>
+    <p>一致しないときは使わずに削除し、当方へご連絡ください。</p>
+
+    <h2>3. 展開と起動</h2>
+    <p>ZIP ファイルを右クリックして［すべて展開］を選び、できたフォルダの中の <code>TSUMUGITimestamp.exe</code> を開きます。フォルダの中身（lib・policy・seed-trust の各フォルダを含む）は移動したり消したりしないでください。</p>
+    <p>本ソフトウェアにはコード署名をしていないため、初回の起動で「Windows によって PC が保護されました」（Microsoft Defender SmartScreen）と表示されることがあります。2. で SHA-256 が一致することを確かめたうえで、［詳細情報］を押し、［実行］を押してください。</p>
+
+    <h2>4. 利用登録</h2>
+    <p>TSUMUGI タイムスタンプサービスで押印するには、登録キーが要ります。<a href="repository.html">リポジトリ</a>の利用申込書に記入し、<a href="mailto:tsumugilabo202608@gmail.com">tsumugilabo202608@gmail.com</a> へお送りください。利用者が契約した外部の時刻認証局で押印する場合と、タイムスタンプを検証する場合は、登録キーは要りません。</p>
+    <p>本ソフトウェアを使った時点で、<a href="repository/tsumugi-terms_01.pdf">利用規約</a>に同意したものとみなします。運用規程・検証手順書は<a href="repository.html">リポジトリ</a>に掲載しています。</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand"><img src="assets/mark.svg" alt="" width="22" height="23"><span>TSUMUGI Labo.</span></div>
+      <p>Googleスプレッドシート・GASによる業務自動化、小規模業務システム構築から、データ収集・AI連携まで承っています。</p>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="service.html">サービス</a></li>
+        <li><a href="pricing.html">料金</a></li>
+        <li><a href="reasons.html">選ばれる理由</a></li>
+        <li><a href="flow.html">流れ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="profile.html">事業沿革</a></li>
+        <li><a href="repository.html">リポジトリ</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="mailto:tsumugilabo202608@gmail.com">tsumugilabo202608@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© TSUMUGI Labo.</div>
+</footer>
+
+</body>
+</html>
