@@ -60,4 +60,24 @@
     <lastmod>2026-09-29</lastmod>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://tsumugilabo.github.io/products.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tsumugilabo.github.io/tsumugi-timestamp-service.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tsumugilabo.github.io/tsumugi-timestamp-client.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tsumugilabo.github.io/tsumugi-timestamp-client-usage.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>
