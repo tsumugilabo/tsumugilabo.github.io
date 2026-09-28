@@ -52,7 +52,7 @@
     <p class="eyebrow">NEWS</p>
     <h2>お知らせ</h2>
     <ul class="news-list">
-      <li><span class="news-date">2026年9月29日</span><span>運用規程・利用規約・検証手順書を掲載しました。2026年10月1日から適用します。</span></li>
+      <li><span class="news-date">2026年9月29日</span><span>運用規程・利用上の注意事項・利用規約・検証手順書を掲載しました。2026年10月1日から適用します。</span></li>
       <li><span class="news-date">2026年9月29日</span><span>利用申込書とプライバシーポリシーを掲載しました。</span></li>
       <li><span class="news-date">2026年9月28日</span><span>リポジトリを開設しました。</span></li>
     </ul>
@@ -70,6 +70,13 @@
         <p>サービスの運用と認証局の運営に関する規程です（CP/CPS相当）。</p>
         <ul class="doc-versions">
           <li><a class="link-underline" href="repository/tsumugi-tsa-policy_10.pdf">1.0版 PDF</a><span>2026年10月1日</span></li>
+        </ul>
+      </div>
+      <div class="card doc">
+        <h3>TSUMUGIタイムスタンプサービス利用上の注意事項</h3>
+        <p>運用規程に基づき、ソフトウェアの動作・制約と当方へ送信する情報を定めます。</p>
+        <ul class="doc-versions">
+          <li><a class="link-underline" href="repository/tsumugi-notes_10.pdf">1.0版 PDF</a><span>2026年10月1日</span></li>
         </ul>
       </div>
       <div class="card doc">
@@ -248,6 +255,28 @@
       </tbody>
     </table></div>
     <p>上限は運用規程4.1.1に基づくものです。</p>
+
+    <h3 id="self-check">7.自己点検</h3>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>点検</th><th>方法</th><th>頻度</th></tr></thead>
+      <tbody>
+        <tr><td>失効情報の更新状況及びリポジトリ掲載情報の到達性</td><td>自動</td><td>1日1回</td></tr>
+        <tr><td>ルート認証局CRLの次回更新日までの残期間（60日を下回ったら代表者へ通知）</td><td>自動</td><td>1日1回</td></tr>
+        <tr><td>認証局の設定及び証明書の発行記録</td><td>代表者による確認</td><td>週1回</td></tr>
+      </tbody>
+    </table></div>
+    <p>点検は運用規程4.4.3に基づくものです。</p>
+
+    <h3 id="platform">8.認証局の実行基盤</h3>
+    <div class="table-scroll"><table class="repo-table">
+      <thead><tr><th>項目</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td>実行基盤</td><td>Cloudflare, Inc.のCloudflare Workers</td></tr>
+        <tr><td>記録の保存</td><td>Cloudflare D1</td></tr>
+        <tr><td>中間認証局の秘密鍵の保管</td><td>Cloudflare WorkersのSecret</td></tr>
+      </tbody>
+    </table></div>
+    <p>実行基盤は運用規程5.1.4に基づくものです。</p>
   </div>
 </section>
 
