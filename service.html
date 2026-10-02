@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>サービス内容 | TSUMUGI Labo.</title>
-<meta name="description" content="Googleスプレッドシート・GASによる集計/通知の自動化から、在庫・勤怠・予約などの小規模業務システム構築、データ収集・AI連携まで。">
+<meta name="description" content="GAS・Excel・Access・Python・Windowsアプリによる業務システム開発と集計・通知の自動化、既存ツールの改修、電子帳簿保存法・タイムスタンプの支援まで。">
 <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
 <link rel="stylesheet" href="assets/style.css">
 <meta name="google-site-verification" content="kSdy159pIdwHEnRBO0bnf6LD9IYcdgQYBSwCVTkgTps" />
@@ -41,65 +41,88 @@
 
 <section>
   <div class="wrap">
+    <p class="eyebrow">WHAT WE DO</p>
+    <h2>お引き受けしていること</h2>
+    <p class="lead">Googleスプレッドシート・GASを中心に、Excel・Access・Python・Windowsアプリまで、業務に合った手段で作ります。料金の目安は<a class="link-underline" href="pricing.html">料金</a>のページにあります。</p>
     <div class="grid4">
       <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" style="stroke:var(--green)" stroke-width="1.6"><path d="M12 3 L21 8 L12 13 L3 8 Z"/><path d="M3 13 L12 18 L21 13"/><path d="M3 17.5 L12 22.5 L21 17.5"/></svg>
+        <h3>業務アプリ・業務システム開発</h3>
+        <p>必要十分な規模の業務システムを、使う人の手順に合わせて作ります。</p>
+        <ul>
+          <li>在庫・顧客・受発注・勤怠・予約の管理</li>
+          <li>スプレッドシートやAccessを使った業務データベース</li>
+          <li>現場で使うWindows業務アプリ（インストーラ付き）</li>
+        </ul>
+      </div>
+      <div class="card">
         <svg class="icon" viewBox="0 0 24 24" fill="none" style="stroke:var(--accent)" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
-        <h3>集計・転記の自動化</h3>
-        <p>複数シート・複数ソースにまたがる作業をスクリプトに任せます。</p>
+        <h3>集計・帳票の自動化</h3>
+        <p>毎月の転記・集計・帳票づくりを、ボタン一つで終わるようにします。</p>
         <ul>
           <li>売上・勤怠・在庫の日次/月次集計</li>
-          <li>手作業での転記・突合の自動化</li>
-          <li>請求書・見積書の金額計算</li>
+          <li>Excelの定型作業の自動化（今のブックに組み込む形も可）</li>
+          <li>CSVを読み込むだけの集計ダッシュボード</li>
         </ul>
       </div>
       <div class="card">
         <svg class="icon" viewBox="0 0 24 24" fill="none" style="stroke:var(--red)" stroke-width="1.6"><path d="M6 8a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
-        <h3>通知・アラートの自動化</h3>
+        <h3>通知・外部連携の自動化</h3>
         <p>「気づいたら対応が遅れていた」をなくす仕組みを作ります。</p>
         <ul>
-          <li>フォーム回答の受付・通知メール</li>
+          <li>フォーム回答の整形・記録・通知メール</li>
           <li>期限・在庫切れなどの自動アラート</li>
-          <li>Gmail・カレンダーとの連携</li>
-        </ul>
-      </div>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" style="stroke:var(--green)" stroke-width="1.6"><path d="M12 3 L21 8 L12 13 L3 8 Z"/><path d="M3 13 L12 18 L21 13"/><path d="M3 17.5 L12 22.5 L21 17.5"/></svg>
-        <h3>小規模業務システム構築</h3>
-        <p>Googleスプレッドシートをデータベース代わりに使う、必要十分な規模のシステムです。</p>
-        <ul>
-          <li>在庫管理・入出庫の記録</li>
-          <li>勤怠管理・シフト管理</li>
-          <li>予約管理(重複防止つき)</li>
-        </ul>
-      </div>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" style="stroke:var(--yellow)" stroke-width="1.6"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v3h3"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
-        <h3>業務効率化・文書管理のご提案</h3>
-        <p>自動化に限らず、業務フローや文書の扱い方そのものを見直すご相談も承ります。</p>
-        <ul>
-          <li>業務フローの整理・可視化</li>
-          <li>文書管理・ファイリング体制の見直し</li>
-          <li>ペーパーレス化のご提案</li>
+          <li>Gmail・カレンダー・チャットとの連携</li>
         </ul>
       </div>
       <div class="card">
         <svg class="icon" viewBox="0 0 24 24" fill="none" style="stroke:var(--accent)" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <h3>データ収集・情報整理の自動化</h3>
-        <p>Web上の情報や外部サービスのデータを定期的に集め、スプレッドシートに整理する仕組みを作ります。</p>
+        <p>公開されている情報や外部サービスのデータを定期的に集め、整理します。</p>
         <ul>
-          <li>価格・在庫・競合情報の定期取得</li>
+          <li>価格・在庫などの公開データの定期取得</li>
           <li>複数サイト・フォームからのデータ集約</li>
           <li>収集結果の自動レポート化</li>
         </ul>
       </div>
       <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" style="stroke:var(--yellow)" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+        <h3>既存ツールの引き継ぎ・改修</h3>
+        <p>作った人がいなくなったマクロやツールを読み解き、直して使い続けられるようにします。</p>
+        <ul>
+          <li>Excel/VBA・GAS・Accessの改修・不具合修正</li>
+          <li>Accessの変換・移行（mdb→accdb）</li>
+          <li>仕様書の無いツールの調査と仕様書化</li>
+        </ul>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" style="stroke:var(--green)" stroke-width="1.6"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v3h3"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
+        <h3>要件整理・設計・ドキュメント</h3>
+        <p>作る前の整理と、作った後に残す文書を引き受けます。</p>
+        <ul>
+          <li>業務フローの整理・要件整理・設計書の作成</li>
+          <li>業務マニュアル・操作手順書の作成</li>
+          <li>文書管理・ファイリング体制の見直し</li>
+        </ul>
+      </div>
+      <div class="card">
         <svg class="icon" viewBox="0 0 24 24" fill="none" style="stroke:var(--red)" stroke-width="1.6"><path d="M12 2 L4 7 v10 l8 5 8-5V7z"/><path d="M12 12 L4 7"/><path d="M12 12 L20 7"/><path d="M12 12 v9"/></svg>
-        <h3>AI連携・ちょっとしたツール開発</h3>
-        <p>ChatGPT・Claudeなどの生成AIをGASや簡易ツールと組み合わせ、判断や文章作成が絡む作業も自動化します。</p>
+        <h3>AI活用による業務改善</h3>
+        <p>ChatGPT・Claudeなどの生成AIを、判断や文章作成が絡む作業に組み込みます。</p>
         <ul>
           <li>問い合わせ内容の分類・返信下書き作成</li>
           <li>文書・データの要約や整形</li>
-          <li>社内用の簡易Webツール・フォームの構築</li>
+          <li>社内でのAI活用の立ち上げ支援</li>
+        </ul>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" style="stroke:var(--yellow)" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <h3>保守・導入サポート</h3>
+        <p>納品した後の追加改修や、使い始めのサポートも承ります。</p>
+        <ul>
+          <li>保守・追加改修（スポットでも可）</li>
+          <li>WordPressサイトのスポット対応</li>
+          <li>大阪近辺は現地でのサポートも可</li>
         </ul>
       </div>
     </div>
@@ -108,22 +131,85 @@
 
 <section class="alt">
   <div class="wrap">
+    <p class="eyebrow">EXPERTISE</p>
+    <h2>専門分野: 電子的な証跡</h2>
+    <p class="lead">電子認証局の運用・タイムスタンプ業務に携わった経験と、自前で運用しているタイムスタンプサービスの知見をもとにご支援します。</p>
+    <div class="grid3">
+      <div class="card">
+        <h3>電子帳簿保存法対応</h3>
+        <p>要件の整理から、タイムスタンプの要らない事務処理規程での運用、検索できる保存の仕組みまで。必要以上に大掛かりな仕組みは勧めません。</p>
+        <p style="margin-top:14px"><a class="link-underline" href="compliance.html">詳しく見る →</a></p>
+      </div>
+      <div class="card">
+        <h3>タイムスタンプ導入支援</h3>
+        <p>アイデア・デザイン・ソースコードなど「その時点で存在していたこと」を残したい場面で、何に・どう付けるかを設計します。</p>
+        <p style="margin-top:14px"><a class="link-underline" href="timestamp.html">詳しく見る →</a></p>
+      </div>
+      <div class="card">
+        <h3>PDFの署名・変換の自動化</h3>
+        <p>PDFへの電子署名・タイムスタンプの一括付与、Office文書のPDF一括変換、PDFの分割・結合などを自動化します。</p>
+        <p style="margin-top:14px"><a class="link-underline" href="pricing.html#other">料金の目安 →</a></p>
+      </div>
+    </div>
+    <p style="margin-top:22px;font-size:14.5px;color:var(--text-muted)">当方が運用するタイムスタンプの仕組みとWindows用アプリは<a class="link-underline" href="products.html">プロダクト</a>のページで紹介しています。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <p class="eyebrow">TOOLS</p>
     <h2>対応ツール・技術</h2>
-    <p class="lead">お使いのGoogleアカウントの範囲内で完結するように構築します。新しく専用ソフトを契約・導入していただく必要はありません。</p>
+    <p class="lead">今お使いの環境の範囲で完結する形を優先します。新しくソフトやサービスの契約が必要になる場合は、先にご相談します。</p>
     <div class="chip-row" style="justify-content:flex-start">
       <span class="chip">Google Apps Script (GAS)</span>
-      <span class="chip">Google スプレッドシート</span>
-      <span class="chip">Google フォーム</span>
-      <span class="chip">Gmail</span>
-      <span class="chip">Google カレンダー</span>
-      <span class="chip">Google Workspace</span>
-      <span class="chip">データ収集・スクレイピング</span>
+      <span class="chip">Google スプレッドシート / フォーム</span>
+      <span class="chip">Gmail / Google カレンダー</span>
+      <span class="chip">Excel / VBA</span>
+      <span class="chip">Access</span>
+      <span class="chip">Python</span>
+      <span class="chip">C# / .NET（Windowsアプリ）</span>
+      <span class="chip">HTML / JavaScript</span>
+      <span class="chip">Cloudflare Workers</span>
       <span class="chip">ChatGPT / Claude 連携</span>
-      <span class="chip">簡易Webツール開発</span>
+      <span class="chip">PDF・電子署名・タイムスタンプ</span>
     </div>
     <p style="margin-top:22px;font-size:13.5px;color:var(--text-muted)">※ 現時点では、数百人規模の同時アクセスが発生する基幹システムや、24時間365日のSLA保守契約が必要な大規模開発は対象外としています。</p>
     <img class="feature-img small" src="assets/img/service-integration.jpg" alt="">
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">WORKS</p>
+    <h2>公開しているサンプル</h2>
+    <p class="lead">作り方と品質の目安として、ソースコードをGitHubで公開しています。</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>CSVヘッダー変換ツール</h3>
+        <p>CSVの列名の付け替え・不要な列の削除・固定値や連番の追加を、ブラウザだけで行います。インストール不要です。</p>
+        <p style="margin-top:14px"><a class="link-underline" href="https://github.com/tsumugilabo/csv-header-converter" target="_blank" rel="noopener">GitHubで見る →</a></p>
+      </div>
+      <div class="card">
+        <h3>フォーム回答の整形・記録・通知（GAS）</h3>
+        <p>Googleフォームの回答を受け取るたびに、表記ゆれを整えて記録し、担当者へ通知します。</p>
+        <p style="margin-top:14px"><a class="link-underline" href="https://github.com/tsumugilabo/gas-form-notifier" target="_blank" rel="noopener">GitHubで見る →</a></p>
+      </div>
+      <div class="card">
+        <h3>勤怠集計ダッシュボード</h3>
+        <p>勤怠CSVを読み込み、従業員別の実働・残業・遅刻・早退・入力エラーをブラウザ内で集計して表示します。</p>
+        <p style="margin-top:14px"><a class="link-underline" href="https://github.com/tsumugilabo/kintai-dashboard" target="_blank" rel="noopener">GitHubで見る →</a></p>
+      </div>
+      <div class="card">
+        <h3>売上明細CSV集計ツール（Python）</h3>
+        <p>店舗ごとに形式の違う売上明細CSVを取り込み、店舗別・月別・カテゴリ別に集計します。</p>
+        <p style="margin-top:14px"><a class="link-underline" href="https://github.com/tsumugilabo/sales-aggregator" target="_blank" rel="noopener">GitHubで見る →</a></p>
+      </div>
+      <div class="card">
+        <h3>スライド差し込みエンジン</h3>
+        <p>スライドのテンプレートの差し込み欄を外から渡した値で埋め、編集できるPowerPointファイルとして書き出します。</p>
+        <p style="margin-top:14px"><a class="link-underline" href="https://github.com/tsumugilabo/slides-filler-demo" target="_blank" rel="noopener">GitHubで見る →</a></p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -140,7 +226,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand"><img src="assets/mark.svg" alt="" width="22" height="23"><span>TSUMUGI Labo.</span></div>
-      <p>Googleスプレッドシート・GASによる業務自動化、小規模業務システム構築から、データ収集・AI連携まで承っています。</p>
+      <p>Googleスプレッドシート・GASを中心とした業務自動化と小規模業務システム構築、電子帳簿保存法・タイムスタンプの支援、TSUMUGIタイムスタンプサービスの運用を行っています。</p>
     </div>
     <div class="footer-col">
       <h4>Menu</h4>

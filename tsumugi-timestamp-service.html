@@ -38,7 +38,7 @@
   <h1>TSUMUGI タイムスタンプサービス</h1>
   <p class="lead" style="margin:14px auto 0">TSUMUGI Labo.が運用する時刻認証の仕組みです。<a class="link-underline" href="tsumugi-timestamp-client.html">TSUMUGI タイムスタンプクライアント</a>から使います。</p>
   <div class="chip-row">
-    <span class="chip">試験運用中</span>
+    <span class="chip">運用中</span>
   </div>
 </div>
 
@@ -59,6 +59,14 @@
         <h3>押印の記録を公開ログに残す</h3>
         <p>押印の記録は公開の透明性ログ（SigstoreのRekor）に残します。あとから時刻を遡って書き換えられないことを、第三者が確かめられます。ログに送るのはファイルのハッシュと署名だけで、ファイルの中身は送りません。</p>
       </div>
+      <div class="card">
+        <h3>当方のツールが無くても検証できる</h3>
+        <p>検証に使う値（認証局の証明書・失効情報・ログの公開鍵など）は<a class="link-underline" href="repository.html">リポジトリ</a>で公開しています。検証手順書に沿えば、当方のアプリを使わずに確かめられます。</p>
+      </div>
+      <div class="card">
+        <h3>定期的に自己点検する</h3>
+        <p>失効情報（CRL）の更新とリポジトリの掲載を毎日自動で、認証局の設定と証明書の発行記録を毎週点検しています。点検の項目はリポジトリの技術情報に載せています。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -70,7 +78,7 @@
     <ul style="color:var(--text-muted);font-size:15px;line-height:2;padding-left:1.2em;margin:0">
       <li>利用には登録（登録キー）が必要です</li>
       <li>1回に押印できるのは30件までです</li>
-      <li>現在は試験運用中です</li>
+      <li>運用の内容は運用規程に定め、公開しています</li>
     </ul>
     <div class="spotlight-card soft">
       <h3>認定タイムスタンプではありません</h3>
@@ -101,7 +109,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand"><img src="assets/mark.svg" alt="" width="22" height="23"><span>TSUMUGI Labo.</span></div>
-      <p>Googleスプレッドシート・GASによる業務自動化、小規模業務システム構築から、データ収集・AI連携まで承っています。</p>
+      <p>Googleスプレッドシート・GASを中心とした業務自動化と小規模業務システム構築、電子帳簿保存法・タイムスタンプの支援、TSUMUGIタイムスタンプサービスの運用を行っています。</p>
     </div>
     <div class="footer-col">
       <h4>Menu</h4>

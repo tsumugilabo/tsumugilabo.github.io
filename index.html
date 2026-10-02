@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TSUMUGI Labo.</title>
-<meta name="description" content="Googleスプレッドシート・GASによる業務自動化と小規模業務システム構築、データ収集・AI連携までのTSUMUGI Labo.です。">
+<meta name="description" content="Googleスプレッドシート・GASを中心とした業務自動化と小規模業務システム構築、電子帳簿保存法・タイムスタンプの支援、自社運用のTSUMUGIタイムスタンプサービスのTSUMUGI Labo.です。">
 <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
 <link rel="stylesheet" href="assets/style.css">
 <meta name="google-site-verification" content="kSdy159pIdwHEnRBO0bnf6LD9IYcdgQYBSwCVTkgTps" />
@@ -36,7 +36,7 @@
   <div class="inner wrap">
     <div class="logo-wrap"><img src="assets/logo.svg" alt="TSUMUGI Labo."></div>
     <h1>確実に動く、ちょうどいい自動化を。</h1>
-    <p class="lead">毎日の集計や転記、予約管理――「そこまで大掛かりじゃないけど、地味に手間」な作業を、Googleスプレッドシート・GAS(Google Apps Script)を中心に自動化します。</p>
+    <p class="lead">毎日の集計や転記、予約管理――「そこまで大掛かりじゃないけど、地味に手間」な作業を、Googleスプレッドシート・GAS(Google Apps Script)を中心に、Excel・Python・Windowsアプリまで使い分けて自動化します。</p>
     <BR>
     <BR>
     <BR>
@@ -53,8 +53,9 @@
       <span class="chip">Google Apps Script</span>
       <span class="chip">Google スプレッドシート</span>
       <span class="chip">Google フォーム</span>
-      <span class="chip">Gmail連携</span>
-      <span class="chip">Google カレンダー連携</span>
+      <span class="chip">Excel / VBA</span>
+      <span class="chip">Python</span>
+      <span class="chip">Windowsアプリ</span>
     </div>
     <img class="feature-img small" src="assets/img/home-hero.jpg" alt="">
   </div>
@@ -79,12 +80,47 @@
         <p>在庫管理・勤怠管理・予約管理など、Googleスプレッドシートをデータベース代わりに使う、必要十分な規模の業務システムを構築します。</p>
       </div>
     </div>
-    <p style="margin-top:22px;font-size:14.5px;color:var(--text-muted)">このほか、Webサイトからのデータ収集や、ChatGPT・Claudeなどの生成AIと組み合わせたちょっとしたツール開発もご相談いただけます。</p>
+    <p style="margin-top:22px;font-size:14.5px;color:var(--text-muted)">このほか、既存のマクロ・ツールの引き継ぎと改修、Webからのデータ収集、ChatGPT・Claudeなどの生成AIと組み合わせたツール開発、設計書・マニュアルの作成もご相談いただけます。</p>
     <p style="margin-top:14px"><a class="link-underline" href="service.html">対応ツール・具体例をもっと見る →</a></p>
   </div>
 </section>
 
 <section>
+  <div class="wrap">
+    <p class="eyebrow">EXPERTISE &amp; PRODUCTS</p>
+    <h2>電子的な証跡を、自分たちでも運用しています</h2>
+    <p class="lead">電子認証局の運用・タイムスタンプ業務の経験を活かし、電子帳簿保存法やタイムスタンプの導入をご支援しています。あわせて、自前のタイムスタンプサービスを運用しています。</p>
+    <div class="grid2">
+      <div class="card product-card">
+        <p class="eyebrow">SERVICE</p>
+        <h3>TSUMUGI タイムスタンプサービス</h3>
+        <p>押印の時刻はNICTの時刻サーバから取り、押印の記録を公開の透明性ログに残す時刻認証の仕組みです。検証に使う値と運用規程を公開し、第三者が確かめられるようにしています。</p>
+        <div class="chip-row" style="justify-content:flex-start;margin:0 0 18px">
+          <span class="chip">運用中</span>
+          <span class="chip">RFC 3161</span>
+          <span class="chip">PAdES</span>
+          <span class="chip">検証は無料</span>
+        </div>
+        <a class="btn-outline" href="products.html">プロダクトを見る</a>
+      </div>
+      <div class="card product-card">
+        <p class="eyebrow">CONSULTING</p>
+        <h3>電子帳簿保存法・タイムスタンプの導入支援</h3>
+        <p>要件の整理から、タイムスタンプの要らない事務処理規程での運用、知財の証拠保全のためのタイムスタンプ運用の設計まで。必要以上に大掛かりな仕組みは勧めません。</p>
+        <div class="chip-row" style="justify-content:flex-start;margin:0 0 18px">
+          <span class="chip">電子帳簿保存法</span>
+          <span class="chip">知財の証拠保全</span>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn-outline" href="compliance.html">電子帳簿保存法</a>
+          <a class="btn-outline" href="timestamp.html">タイムスタンプ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
   <div class="wrap">
     <p class="eyebrow">WHY TSUMUGI LABO.</p>
     <h2>選ばれる理由</h2>
@@ -134,7 +170,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand"><img src="assets/mark.svg" alt="" width="22" height="23"><span>TSUMUGI Labo.</span></div>
-      <p>Googleスプレッドシート・GASによる業務自動化、小規模業務システム構築から、データ収集・AI連携まで承っています。</p>
+      <p>Googleスプレッドシート・GASを中心とした業務自動化と小規模業務システム構築、電子帳簿保存法・タイムスタンプの支援、TSUMUGIタイムスタンプサービスの運用を行っています。</p>
     </div>
     <div class="footer-col">
       <h4>Menu</h4>
