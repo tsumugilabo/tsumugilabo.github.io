@@ -32,6 +32,15 @@
   </div>
 </header>
 
+<!-- 臨時: PHP脆弱性の緊急対応（終了したらこのブロックと style.css の urgent-banner を消す） -->
+<div class="urgent-banner" role="region" aria-label="臨時のお知らせ">
+  <div class="urgent-inner">
+    <span class="urgent-tag">臨時</span>
+    <p class="urgent-text"><strong>PHPの脆弱性（CVE-2026-109618・109619）の緊急対応を承っています。</strong><span>サイトを止めずにPHPを更新します。対象かどうかの確認は無料です。</span></p>
+    <a class="urgent-link" href="pricing.html#php-update">詳しく見る</a>
+  </div>
+</div>
+
 <div class="page-hero wrap">
   <p class="eyebrow">PRICE</p>
   <h1>料金・サービス一覧</h1>
@@ -518,7 +527,7 @@
     <h2>保守・導入サポート</h2>
     <div class="svc-group">
 
-      <div class="card svc">
+      <div class="card svc" id="php-update">
         <h3>PHPの更新・サーバー移行</h3>
         <p class="svc-sub">PHPの脆弱性への対応で、バージョンを上げる必要があるサイトの更新を承ります。上げたら壊れそうで止まっているサイトも、写しで確かめてから、止めずに移します。</p>
         <div class="plan-grid">
